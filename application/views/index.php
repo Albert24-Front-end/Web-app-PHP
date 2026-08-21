@@ -32,6 +32,10 @@
         color: red;
         text-align: center;
     }
+    #inc {
+        background-color: lightblue;
+        color: white;
+    }
 </style>
 
 <script>
