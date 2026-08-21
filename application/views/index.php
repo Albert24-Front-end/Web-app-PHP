@@ -6,6 +6,9 @@
     <form action="/logout" method="post">
         <button type="submit">Logout</button>
     </form>
+    <form action='/reset' method='post'>
+        <button>Reset the counter</button>
+    </form>
 </div>
 
 <style>
@@ -38,7 +41,13 @@
                 method: "POST",
                 credentials: "include"
             }).then(
-                r => r.json()
+                r => {
+                    if (!r.ok) {
+                        throw new Error("Request failed");
+                    }
+
+                    return r.json();
+                }
             ).then(
                 (d) => {
                     document.querySelector(".counter").innerHTML = d.counter;
