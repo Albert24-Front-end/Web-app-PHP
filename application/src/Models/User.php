@@ -15,7 +15,7 @@ class User
     {
 
     }
-
+// Active Record Pattern
     public function save(): void
     {
         $db = Db::getPdo();

@@ -5,6 +5,7 @@
     <?php if (isset($error)) : ?>
         <div class="error"><?= htmlspecialchars($error); ?></div>
     <?php endif; ?>
+    <a href="/reg">Registration</a>
     <input type="text" name="login" placeholder="login">
     <input name="password" placeholder="password">
     <button>Login</button>
