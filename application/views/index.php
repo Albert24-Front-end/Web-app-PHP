@@ -33,8 +33,9 @@
         text-align: center;
     }
     #inc {
-        background-color: lightblue;
+        background-color: blue;
         color: white;
+        font-weight: bold;
     }
 </style>
 
