@@ -3,6 +3,9 @@
     <a href="/change-pass">Change Password</a>
     <div class="counter"><?= htmlspecialchars($user->counter); ?></div>
     <button id="inc">Inc Counter</button>
+    <form action="/logout" method="post">
+        <button type="submit">Logout</button>
+    </form>
 </div>
 
 <style>

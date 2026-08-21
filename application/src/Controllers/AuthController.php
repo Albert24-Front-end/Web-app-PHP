@@ -58,6 +58,13 @@ class AuthController
            header("Location: /login");
        }
     }
+
+    public function logout(): void
+    {
+        session_destroy();
+        header("Location: /login");
+    }
+
     public function changePass(): void
     {
         try {
