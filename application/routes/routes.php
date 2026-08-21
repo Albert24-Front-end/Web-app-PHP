@@ -9,5 +9,5 @@ return [
     "POST /inc" => [\App\Controllers\CounterController::class, "inc"],
     "GET /change-pass" => [\App\Controllers\AuthController::class, "changePassForm"],
     "POST /change-pass" => [\App\Controllers\AuthController::class, "changePass"],
-
+    "POST /reset" => [\App\Controllers\CounterController::class, "reset"],
 ];

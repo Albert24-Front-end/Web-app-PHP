@@ -18,6 +18,21 @@ class CounterController
             $user->incCounter();
             $user->save();
         });
+        header("Content-Type: application/json");
         echo json_encode(["counter" => $user->counter]);
+    }
+
+    public static function reset(): void
+    {
+        if (!isset($_SESSION["userId"])) {
+            header("401 Not authorized");
+            return;
+        }
+        Db::transaction(function () use(&$user) {
+            $user = User::findById($_SESSION["userId"], true);
+            $user->reset();
+            $user->save();
+        });
+        header("Location: /");
     }
 }
